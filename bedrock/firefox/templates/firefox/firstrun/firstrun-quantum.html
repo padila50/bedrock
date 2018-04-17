@@ -6,6 +6,12 @@
 
 {% extends "firefox/firstrun/base-pebbles.html" %}
 
+{% block experiments %}
+  {% if switch('firstrun-copy-experiment', ['en-US']) %}
+    {% javascript 'experiment_firstrun_copy' %}
+  {% endif %}
+{% endblock %}
+
 {% block body_id %}firstrun-quantum-onboarding{% endblock %}
 
 {% block page_title %}
@@ -23,6 +29,7 @@
   <div id="scene">
     <main class="fxaccounts-container">
       <header id="main-header">
+      {% block main_copy %}
         <h1>
         {% if l10n_has_tag('firstrun_email_only_form') %}
           {{ _('Take Firefox with You') }}
@@ -37,6 +44,7 @@
           {{_('Sign in to your account and we’ll sync the bookmarks, passwords and other great things you’ve saved to Firefox on other devices.')}}
         {% endif %}
         </p>
+      {% endblock %}
         <a href="{{ url('firefox.features.sync') }}" rel="noopener noreferrer" target="_blank">{{_('Learn more about Firefox Accounts')}}</a>
       </header>
       <div id="fxaccounts-wrapper">
