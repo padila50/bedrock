@@ -8,10 +8,10 @@
     var moreland = new Mozilla.TrafficCop({
         id: 'experiment-fxfirstrun-copy-042018',
         variations: {
-            'v=a': 2, // control
-            'v=b': 2,
-            'v=c': 2,
-            'v=d': 2
+            'v=a': 25, // control
+            'v=b': 25,
+            'v=c': 25,
+            'v=d': 25
         }
     });
 
