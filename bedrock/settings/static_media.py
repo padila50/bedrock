@@ -163,6 +163,18 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'css/pebbles-basic-bundle.css',
     },
+    'protocol-core': {
+        'source_filenames': (
+            'css/protocol/protocol.scss',
+        ),
+        'output_filename': 'css/protocol-core-bundle.css',
+    },
+    'protocol-test': {
+        'source_filenames': (
+            'css/mozorg/protocol-test.scss',
+        ),
+        'output_filename': 'css/protocol-test-bundle.css',
+    },
     'oldIE': {
         'source_filenames': (
             'css/sandstone/oldIE.less',
@@ -1237,6 +1249,13 @@ PIPELINE_JS = {
             'js/mozorg/internet-health/health-subpage.js',
         ),
         'output_filename': 'js/internet-health-subpage-bundle.js',
+    },
+    'protocol-test': {
+        'source_filenames': (
+            'protocol/js/protocol-accordion.js',
+            'protocol/js/protocol-modal.js',
+        ),
+        'output_filename': 'js/protocol-test-bundle.js',
     },
     'privacy-day-egg': {
         'source_filenames': (

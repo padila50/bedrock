@@ -25,6 +25,14 @@ const lintPathsCSS = [
     '!media/css/libs/*'
 ];
 
+gulp.task('protocol:copy', () => {
+    return gulp.src('./node_modules/@mozilla-protocol/core/protocol/**/*.scss')
+        .pipe(watch('./node_modules/@mozilla-protocol/core/protocol/**/*.scss', {
+            'verbose': true
+        }))
+        .pipe(gulp.dest('./static/protocol/'));
+});
+
 gulp.task('media:watch', () => {
     return gulp.src('./media/**/*')
         .pipe(watch('./media/**/*', {
@@ -63,6 +71,7 @@ gulp.task('static:clean', () => {
 });
 
 gulp.task('default', () => {
+    gulp.start('protocol:copy');
     gulp.start('media:watch');
 
     gulp.watch(lintPathsJS).on('change', file => {

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block site_css %}
+      {% stylesheet 'protocol-core' %}
+    {% endblock %}
+
+    {% block page_css %}
+      {% stylesheet 'protocol-test' %}
+    {% endblock %}
+  </head>
+
+  <body>
+    <main>
+      <section class="section">
+        <div class="content">
+
+          <h1>Typescale</h1>
+          <p>This page demonstrates the range and scale of type styles in Protocol.</p>
+
+          <p class="label">Display Huge</p>
+          <h1 class="scale-sample-huge">Jived fox nymph grabs quick waltz.</h1>
+
+          <p class="label">Display One</p>
+          <h1 class="scale-sample-l1">Sphinx of black quartz, judge my vow!</h1>
+
+          <p class="label">Display Two</p>
+          <h2 class="scale-sample-l2">The five boxing wizards jump quickly.</h2>
+
+          <p class="label">Display Three</p>
+          <h3 class="scale-sample-l3">How vexingly quick daft zebras jump!</h3>
+
+          <p class="label">Display Four</p>
+          <h4 class="scale-sample-l4">Pack my box with five dozen liquor jugs.</h4>
+
+          <p class="label">Body One</p>
+          <p class="scale-sample-l5">When zombies arrive, quickly fax judge Pat.</p>
+
+          <p class="label">Body Two</p>
+          <p class="scale-sample-l6">My ex pub quiz crowd gave joyful thanks.</p>
+
+          <p class="label">Small</p>
+          <p class="scale-sample-small">Amazingly few discotheques provide jukeboxes.</p>
+
+          <p class="label">Extra Small</p>
+          <p class="scale-sample-x-small">Quizzical twins proved my hijack-bug fix.</p>
+        </div>
+      </section>
+
+    </main>
+
+    {% block js %}
+      {% javascript 'protocol-test' %}
+    {% endblock %}
+
+  </body>
+</html>

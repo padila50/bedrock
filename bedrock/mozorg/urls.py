@@ -315,4 +315,6 @@ urlpatterns = (
     url(r'^microsummaries/0\.1$', views.namespaces, {'namespace': 'microsummaries'}),
     url(r'^projects/xforms/2005/type$', views.namespaces, {'namespace': 'xforms-type'}),
     url(r'^xbl$', views.namespaces, {'namespace': 'xbl'}),
+
+    page('protocol-test', 'mozorg/protocol-test.html'),
 )
